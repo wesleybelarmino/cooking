@@ -1,5 +1,4 @@
 import 'package:cooking/features/recipe/data/models/recipe_model.dart';
-import 'package:cooking/features/recipe/domain/entities/recipe.dart';
 import 'package:cooking/features/recipe/domain/entities/recipe_list.dart';
 
 class RecipeListModel extends RecipeList {
