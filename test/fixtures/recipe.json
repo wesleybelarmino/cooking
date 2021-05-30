@@ -1,0 +1,22 @@
+{
+    "id": 1,
+    "name": "Nutella Pie",
+    "ingredients": [
+      {
+        "quantity": 0.0,
+        "measure": "",
+        "ingredient": ""
+      }
+    ],
+    "steps": [
+      {
+        "id": 1,
+        "shortDescription": "",
+        "description": "",
+        "videoURL": "",
+        "thumbnailURL": ""
+      }
+    ],
+    "servings": 8,
+    "image": ""
+  }
