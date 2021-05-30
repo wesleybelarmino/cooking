@@ -4,7 +4,7 @@
 
 import 'dart:async' as _i4;
 
-import 'package:cooking/core/platform/network_info.dart' as _i5;
+import 'package:cooking/core/network/network_info.dart' as _i5;
 import 'package:cooking/features/recipe/data/datasources/recipe_remote_data_source.dart'
     as _i3;
 import 'package:cooking/features/recipe/data/models/recipe_list_model.dart'

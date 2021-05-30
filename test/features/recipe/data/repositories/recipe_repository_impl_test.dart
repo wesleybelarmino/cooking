@@ -1,6 +1,8 @@
+import 'dart:convert';
+
 import 'package:cooking/core/error/exceptions.dart';
 import 'package:cooking/core/error/failures.dart';
-import 'package:cooking/core/platform/network_info.dart';
+import 'package:cooking/core/network/network_info.dart';
 import 'package:cooking/features/recipe/data/datasources/recipe_remote_data_source.dart';
 import 'package:cooking/features/recipe/data/models/recipe_list_model.dart';
 import 'package:cooking/features/recipe/data/models/recipe_model.dart';
@@ -11,6 +13,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/annotations.dart';
 import 'package:mockito/mockito.dart';
 
+import '../../../../fixtures/fixture_reader.dart';
 import 'recipe_repository_impl_test.mocks.dart';
 
 @GenerateMocks([RecipeRemoteDataSource, NetworkInfo])
@@ -23,13 +26,8 @@ void main() {
       networkInfo: mockNetworkInfo);
 
   group('getRecipes', () {
-    final ingredients = IngredientsModel("", "", 0.0);
-    final steps = StepsModel(1, "", "", "", "");
-
-    final recipeModel = RecipeModel(1, "Nutella Pie", 8, "",
-        List.filled(1, ingredients), List.filled(1, steps));
-
-    final tRecipeListModel = RecipeListModel(List.filled(1, recipeModel));
+    final tRecipeListModel =
+        RecipeListModel.fromJson(json.decode(fixture("recipe_list.json")));
     final RecipeList tRecipeList = tRecipeListModel;
 
     test('should check if the device is online', () async {

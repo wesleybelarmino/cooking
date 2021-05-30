@@ -1,6 +1,6 @@
 import 'package:cooking/core/error/exceptions.dart';
 import 'package:cooking/core/error/failures.dart';
-import 'package:cooking/core/platform/network_info.dart';
+import 'package:cooking/core/network/network_info.dart';
 import 'package:cooking/features/recipe/data/datasources/recipe_remote_data_source.dart';
 import 'package:cooking/features/recipe/domain/entities/recipe_list.dart';
 import 'package:cooking/features/recipe/domain/repositories/recipe_repository.dart';
