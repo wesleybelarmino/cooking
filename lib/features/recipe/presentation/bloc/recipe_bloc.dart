@@ -9,9 +9,6 @@ import 'package:equatable/equatable.dart';
 part 'recipe_event.dart';
 part 'recipe_state.dart';
 
-const String SERVER_FAILURE_MESSAGE = 'Server Failure';
-const String CONNECTION_FAILURE_MESSAGE = 'No Internet Connection';
-
 class RecipeBloc extends Bloc<RecipeEvent, RecipeState> {
   GetRecipes recipeUseCase;
 
@@ -23,20 +20,8 @@ class RecipeBloc extends Bloc<RecipeEvent, RecipeState> {
   ) async* {
     if (event is GetRecipeList) {
       final result = await recipeUseCase();
-      yield result.fold(
-          (failure) => Error(message: _mapFailureToMessage(failure)),
+      yield result.fold((failure) => Error(message: failure.failureMessage),
           (reciplist) => Loaded(recipeList: reciplist));
-    }
-  }
-
-  String _mapFailureToMessage(Failure failure) {
-    switch (failure.runtimeType) {
-      case ServerFailure:
-        return SERVER_FAILURE_MESSAGE;
-      case ConnectionFailure:
-        return CONNECTION_FAILURE_MESSAGE;
-      default:
-        return "Unexpected error";
     }
   }
 }
