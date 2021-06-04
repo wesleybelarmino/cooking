@@ -1,6 +1,7 @@
 import 'package:cooking/features/recipe/domain/entities/recipe.dart';
 import 'package:cooking/features/recipe/domain/entities/recipe_list.dart';
 import 'package:cooking/features/recipe/presentation/bloc/recipe_bloc.dart';
+import 'package:cooking/features/recipe/presentation/pages/recipe_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
 
@@ -46,9 +47,19 @@ class RecipeListWidget extends StatelessWidget {
   Widget _buildDataList(RecipeList recipeList) {
     return Container(
       child: ListView.builder(
-          itemCount: recipeList.recipes.length,
-          itemBuilder: (BuildContext context, int index) =>
-              _buildDataListItem(context, recipeList.recipes[index])),
+        itemCount: recipeList.recipes.length,
+        itemBuilder: (_, __) => InkWell(
+          child: _buildDataListItem(_, recipeList.recipes[__]),
+          onTap: () => Navigator.push(
+            _,
+            MaterialPageRoute(
+              builder: (context) => RecipeDetailPage(
+                recipe: recipeList.recipes[__],
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 
@@ -80,12 +91,14 @@ class RecipeListWidget extends StatelessWidget {
                   width: MediaQuery.of(context).size.width,
                   height: 40,
                   child: Center(
-                    child: Text(recipe.name,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18,
-                            color: Colors.black54)),
+                    child: Text(
+                      recipe.name,
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 18,
+                          color: Colors.black54),
+                    ),
                   ),
                 )),
           ],

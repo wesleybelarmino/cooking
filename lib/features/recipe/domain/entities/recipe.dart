@@ -24,6 +24,9 @@ class Ingredients extends Equatable {
 
   @override
   List<Object?> get props => [ingredient, measure, quantity];
+
+  @override
+  String toString() => '$quantity $measure $ingredient';
 }
 
 class Steps extends Equatable {
@@ -39,4 +42,7 @@ class Steps extends Equatable {
   @override
   List<Object?> get props =>
       [id, description, shortDescription, thumbnailURL, videoURL];
+
+  @override
+  String toString() => '$description';
 }
