@@ -21,7 +21,7 @@ class RecipeListPage extends StatelessWidget {
 
   BlocProvider<RecipeBloc> buildBody(BuildContext context) {
     return BlocProvider(
-      create: (_) => sl<RecipeBloc>(),
+      create: (_) => sl<RecipeBloc>()..add(GetRecipeList()),
       child: Container(
         child: BlocBuilder<RecipeBloc, RecipeState>(
           builder: (context, state) {

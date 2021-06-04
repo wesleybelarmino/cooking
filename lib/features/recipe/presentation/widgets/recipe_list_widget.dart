@@ -45,12 +45,27 @@ class RecipeListWidget extends StatelessWidget {
   Widget _buildDataList(RecipeList recipeList) {
     return Container(
       child: ListView.builder(
-          itemBuilder: (context, index) =>
+          itemCount: recipeList.recipes.length,
+          itemBuilder: (BuildContext context, int index) =>
               _buildDataListItem(recipeList.recipes[index])),
     );
   }
 
   Widget _buildDataListItem(Recipe recipe) {
-    return Container();
+    return Card(
+      elevation: 2,
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          children: <Widget>[
+            SizedBox(width: 10),
+            Text(
+              recipe.name,
+              style: TextStyle(fontSize: 20),
+            )
+          ],
+        ),
+      ),
+    );
   }
 }
