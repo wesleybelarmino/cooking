@@ -19,6 +19,7 @@ class RecipeListWidget extends StatelessWidget {
 
   Widget _buildShimmerList() {
     return Container(
+      padding: const EdgeInsets.all(5.0),
       child: Shimmer.fromColors(
           child: ListView.builder(
             itemBuilder: (_, __) => Padding(
@@ -35,7 +36,7 @@ class RecipeListWidget extends StatelessWidget {
                 ),
               ),
             ),
-            itemCount: 6,
+            itemCount: 3,
           ),
           baseColor: Colors.grey.shade300,
           highlightColor: Colors.grey.shade100),
@@ -47,22 +48,46 @@ class RecipeListWidget extends StatelessWidget {
       child: ListView.builder(
           itemCount: recipeList.recipes.length,
           itemBuilder: (BuildContext context, int index) =>
-              _buildDataListItem(recipeList.recipes[index])),
+              _buildDataListItem(context, recipeList.recipes[index])),
     );
   }
 
-  Widget _buildDataListItem(Recipe recipe) {
-    return Card(
-      elevation: 2,
-      child: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Row(
-          children: <Widget>[
-            SizedBox(width: 10),
-            Text(
-              recipe.name,
-              style: TextStyle(fontSize: 20),
-            )
+  Widget _buildDataListItem(BuildContext context, Recipe recipe) {
+    return Container(
+      padding: const EdgeInsets.all(5.0),
+      height: 240,
+      width: 300,
+      child: Card(
+        elevation: 2,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(15.0),
+        ),
+        clipBehavior: Clip.antiAliasWithSaveLayer,
+        child: Stack(
+          children: [
+            Positioned.fill(
+              child: Image.asset(
+                'assets/images/' +
+                    recipe.name.toLowerCase().replaceAll(" ", "") +
+                    ".jpg",
+                fit: BoxFit.fill,
+              ),
+            ),
+            Positioned(
+                bottom: 0,
+                child: Container(
+                  color: Colors.white,
+                  width: MediaQuery.of(context).size.width,
+                  height: 40,
+                  child: Center(
+                    child: Text(recipe.name,
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 18,
+                            color: Colors.black54)),
+                  ),
+                )),
           ],
         ),
       ),
