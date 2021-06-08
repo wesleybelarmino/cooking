@@ -124,6 +124,9 @@ class RecipeDetailWidget extends StatelessWidget {
               ),
             ],
           ),
+          SizedBox(
+            height: 10,
+          )
         ],
       ),
     );
