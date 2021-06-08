@@ -88,14 +88,7 @@ class RecipeDetailWidget extends StatelessWidget {
             itemCount: steps.length,
             itemBuilder: (_, __) => InkWell(
               child: _buildStepsItems(_, steps[__]),
-              onTap: () => Navigator.push(
-                _,
-                MaterialPageRoute(
-                  builder: (context) => RecipeVideoPage(
-                    steps[__],
-                  ),
-                ),
-              ),
+              onTap: () => _openRecipeVideo(_, steps[__]),
             ),
           ),
           SizedBox(
@@ -113,22 +106,39 @@ class RecipeDetailWidget extends StatelessWidget {
         children: [
           Row(
             children: [
-              Expanded(
-                child: Text(steps.toString()),
-              ),
               if (steps.videoLink.isNotEmpty)
                 Image.asset(
                   'assets/images/youtube.png',
                   width: 20,
                   height: 20,
                 ),
+              SizedBox(
+                width: 10,
+              ),
+              if (steps.videoLink.isEmpty)
+                SizedBox(
+                  width: 20,
+                ),
+              Expanded(
+                child: Text(steps.toString()),
+              ),
             ],
           ),
-          SizedBox(
-            height: 10,
-          )
         ],
       ),
     );
+  }
+
+  void _openRecipeVideo(BuildContext context, Steps step) {
+    if (step.videoLink.isNotEmpty) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) => RecipeVideoPage(
+            step,
+          ),
+        ),
+      );
+    }
   }
 }
