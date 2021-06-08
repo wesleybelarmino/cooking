@@ -1,6 +1,7 @@
 import 'package:cooking/core/network/network_info.dart';
 import 'package:cooking/features/recipe/data/repositories/recipe_repository_impl.dart';
-import 'package:cooking/features/recipe/presentation/bloc/recipe_bloc.dart';
+import 'package:cooking/features/recipe/presentation/bloc/recipe/recipe_bloc.dart';
+import 'package:cooking/features/recipe/presentation/bloc/video/video_recipe_bloc.dart';
 import 'package:get_it/get_it.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 
@@ -15,6 +16,7 @@ void init() {
   //! Features  Recipes
   // Block
   sl.registerFactory(() => RecipeBloc(recipeUseCase: sl()));
+  sl.registerFactory(() => VideoRecipeBloc());
 
   // Use case
   sl.registerLazySingleton(() => GetRecipes(sl()));

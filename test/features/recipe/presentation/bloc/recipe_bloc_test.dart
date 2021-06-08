@@ -4,7 +4,7 @@ import 'package:bloc_test/bloc_test.dart';
 import 'package:cooking/core/error/failures.dart';
 import 'package:cooking/features/recipe/data/models/recipe_list_model.dart';
 import 'package:cooking/features/recipe/domain/usecases/get_recipes.dart';
-import 'package:cooking/features/recipe/presentation/bloc/recipe_bloc.dart';
+import 'package:cooking/features/recipe/presentation/bloc/recipe/recipe_bloc.dart';
 import 'package:dartz/dartz.dart';
 import 'package:flutter_test/flutter_test.dart';
 

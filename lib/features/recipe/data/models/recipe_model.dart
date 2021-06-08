@@ -2,8 +2,8 @@ import 'package:cooking/features/recipe/domain/entities/recipe.dart';
 
 class RecipeModel extends Recipe {
   RecipeModel(int id, String name, int servings, String image,
-      List<IngredientsModel> ingredients, List<StepsModel> stepes)
-      : super(id, name, servings, image, ingredients, stepes);
+      List<IngredientsModel> ingredients, List<StepsModel> steps)
+      : super(id, name, servings, image, ingredients, steps);
 
   factory RecipeModel.fromJson(Map<String, dynamic> json) {
     //parse list of ingredients

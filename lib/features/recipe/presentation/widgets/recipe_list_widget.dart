@@ -1,6 +1,6 @@
 import 'package:cooking/features/recipe/domain/entities/recipe.dart';
 import 'package:cooking/features/recipe/domain/entities/recipe_list.dart';
-import 'package:cooking/features/recipe/presentation/bloc/recipe_bloc.dart';
+import 'package:cooking/features/recipe/presentation/bloc/recipe/recipe_bloc.dart';
 import 'package:cooking/features/recipe/presentation/pages/recipe_detail_page.dart';
 import 'package:flutter/material.dart';
 import 'package:shimmer/shimmer.dart';
@@ -27,13 +27,9 @@ class RecipeListWidget extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Card(
                 elevation: 2,
-                child: Row(
-                  children: [
-                    Container(
-                      width: MediaQuery.of(_).size.width,
-                      height: 200,
-                    )
-                  ],
+                child: Container(
+                  width: MediaQuery.of(_).size.width,
+                  height: 200,
                 ),
               ),
             ),

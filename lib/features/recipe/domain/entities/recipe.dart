@@ -2,17 +2,17 @@ import 'package:equatable/equatable.dart';
 
 class Recipe extends Equatable {
   const Recipe(this.id, this.name, this.servings, this.image, this.ingredients,
-      this.stepes);
+      this.steps);
 
   final int id;
   final String name;
   final int servings;
   final String image;
   final List<Ingredients> ingredients;
-  final List<Steps> stepes;
+  final List<Steps> steps;
 
   @override
-  List<Object?> get props => [id, name, servings, image, ingredients, stepes];
+  List<Object?> get props => [id, name, servings, image, ingredients, steps];
 }
 
 class Ingredients extends Equatable {
@@ -38,6 +38,7 @@ class Steps extends Equatable {
   final String shortDescription;
   final String thumbnailURL;
   final String videoURL;
+  String get videoLink => videoURL.isNotEmpty ? videoURL : thumbnailURL;
 
   @override
   List<Object?> get props =>

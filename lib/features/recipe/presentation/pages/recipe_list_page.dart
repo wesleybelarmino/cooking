@@ -1,4 +1,4 @@
-import 'package:cooking/features/recipe/presentation/bloc/recipe_bloc.dart';
+import 'package:cooking/features/recipe/presentation/bloc/recipe/recipe_bloc.dart';
 import 'package:cooking/features/recipe/presentation/widgets/recipe_error_message_widget.dart';
 import 'package:cooking/features/recipe/presentation/widgets/recipe_list_widget.dart';
 import 'package:cooking/injection_container.dart';
