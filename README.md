@@ -2,6 +2,8 @@
 
 App simples pra ajudar a consolidar tudo que aprendi e aplicar alguns conceitos que eu já usava no Android. O bom do Flutter é que além da curva de aprendizagem ser bem de boas tem muito material.
 
+![Screenshot](home.png) ![Screenshot](recipe.png) ![Screenshot](recipe_video.png)
+
 
 ## Getting Started
 
