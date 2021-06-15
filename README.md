@@ -2,16 +2,19 @@
 
 Simple app to help me to consolidate everything I've learned and apply some concepts I've already used on Android. 
 
-App Libraries In this Project i have used many api which and I will describe each one briefly.
+App Libraries 
+<br/>
+In this Project i have used many api which and I will describe each one briefly.
 
-**get_it**: Dependencies Injection library 
-**flutter_bloc**: Library that helps implement the [BLoC design pattern!](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/).
-**shimmer**: Library that provides an easy way to add a shimmer effect to any view.
-**mockito**: Mockito is a mocking framework to help us to create a clean unity test.
-**bloc_test**: A testing library which makes it easy to test blocs.
-
-
-
+**get_it**: Dependencies Injection library  
+**flutter_bloc**: Library that helps implement the [BLoC design pattern](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/).  
+**shimmer**: Library that provides an easy way to add a shimmer effect to any view.  
+**mockito**: Mockito is a mocking framework to help us to create a clean unity test.  
+**bloc_test**: A testing library which makes it easy to test blocs.  
+  
+<br/>
+<br/>
+<br/>
 
 ![Screenshot](home.png) 
 
