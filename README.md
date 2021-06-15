@@ -1,6 +1,17 @@
 # Cooking
 
-App simples pra ajudar a consolidar tudo que aprendi e aplicar alguns conceitos que eu já usava no Android. O bom do Flutter é que além da curva de aprendizagem ser bem de boas tem muito material.
+Simple app to help me to consolidate everything I've learned and apply some concepts I've already used on Android. 
+
+App Libraries In this Project i have used many api which and I will describe each one briefly.
+
+**get_it**: Dependencies Injection library 
+**flutter_bloc**: Library that helps implement the [BLoC design pattern!](https://www.didierboelens.com/2018/08/reactive-programming-streams-bloc/).
+**shimmer**: Library that provides an easy way to add a shimmer effect to any view.
+**mockito**: Mockito is a mocking framework to help us to create a clean unity test.
+**bloc_test**: A testing library which makes it easy to test blocs.
+
+
+
 
 ![Screenshot](home.png) 
 
@@ -12,14 +23,14 @@ App simples pra ajudar a consolidar tudo que aprendi e aplicar alguns conceitos 
 ## Getting Started
 
 
-Pra quem quiser começar recomendo esses dois cursos grátis da Udemy
+For those who want to get started, I recommend these two free courses on Udemy 
 
 https://www.udemy.com/course/flutter-crie-aplicativos-android-e-ios-com-sdk-mobile-do-google-e-dart/
 
 https://www.udemy.com/course/flutter-desenvolva-um-cadastro-completo-2020/
 
 
-Também recomendo essa série de vídeos que abordam boas práticas como TDD e Clean Architecture
+I also recommend this series of videos that cover best practices like TDD and Clean Architecture.
 
 https://www.youtube.com/playlist?list=PLB6lc7nQ1n4iYGE_khpXRdJkJEp9WOech
 
