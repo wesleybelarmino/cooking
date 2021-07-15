@@ -4,8 +4,8 @@ Simple app to help me to consolidate everything I've learned and apply some conc
 <br/>
 <br/>
 
-
-[###Architecture](https://github.com/ResoCoder/flutter-tdd-clean-architecture-course)
+https://github.com/ResoCoder/flutter-tdd-clean-architecture-course - automatic!
+###Architecture
 <br/>
 <br/>
 ![Screenshot](architecture-proposal.png) 
