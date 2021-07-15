@@ -1,10 +1,12 @@
 # Cooking
 
 Simple app to help me to consolidate everything I've learned and apply some concepts I've already used on Android. 
-
+<br/>
+<br/>
 
 
 [Architecture]: https://github.com/ResoCoder/flutter-tdd-clean-architecture-course
+<br/>
 ![Screenshot](architecture-proposal.png) 
 
 
