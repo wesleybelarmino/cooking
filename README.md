@@ -2,6 +2,12 @@
 
 Simple app to help me to consolidate everything I've learned and apply some concepts I've already used on Android. 
 
+
+
+[Architecture]: https://github.com/ResoCoder/flutter-tdd-clean-architecture-course
+![Screenshot](architecture-proposal.png) 
+
+
 App Libraries 
 <br/>
 In this Project i have used many api which and I will describe each one briefly.
